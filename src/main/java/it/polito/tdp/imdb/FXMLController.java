@@ -55,7 +55,7 @@ public class FXMLController {
 
     @FXML
     void doCreaGrafo(ActionEvent event) {
-    	if(!boxGenere.getValue().equals("")) {
+    	if(boxGenere.getValue()!=null && !txtGiorni.getText().equals("")) {
     		model.creagrafo(boxGenere.getValue());
     		boxAttore.getItems().addAll(model.getattori(boxGenere.getValue()));
     		txtResult.setText("grafo creato con vertici "+model.getNvertici()+" archi "+model.getNarchi());
